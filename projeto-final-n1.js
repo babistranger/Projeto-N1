@@ -410,8 +410,8 @@ function MotivocomMaisrepasse(transacoes) {
   
     contarmotivo[t.motivo].quantidade++;                       //Soma a quantidade de repasses 
     contarmotivo[t.motivo].valorTotalRepasses += t.valor;      //Interessante emitir o total dos repasses
-  }
-   });
+   }
+  });
   
    let motivoMrepasse = {quantidade: 0};
   
@@ -686,10 +686,11 @@ function OrgaoComMaisRepassesbemsucedidos2(transacoesValidas) {
         valorTotalRepasses:0
       }
     }
-  }
+  
     contarbem2[t.orgao].quantidade++;                       //Soma a quantidade de repasses 
     contarbem2[t.orgao].valorTotalRepasses += t.valor;      //Interessante emitir o total dos repasses
-     
+    
+    }  
    });
   
    let orgaoMrepasse2 = {quantidade: 0};
@@ -713,7 +714,7 @@ function OrgaoComMaisRepassesbemsucedidos2(transacoesValidas) {
 }
 
 
-const resultadoorgaobem2= OrgaoComMaisRepassesbemsucedidos2(transacoes2);             //Chama a função com os novos objetos criados
+const resultadoorgaobem2= OrgaoComMaisRepassesbemsucedidos2(transacoesValidas);             //Chama a função com os novos objetos criados
 console.log("O Órgão que mais fez mais repasses válidos bem sucedidos foi: ")
 console.log(resultadoorgaobem2);                                                      //Imprime todos os objetos
 
